@@ -10,7 +10,10 @@ import lxml.html
 #list for podcast feeds
 feeds = {'Lord of Spirits': 'https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmFuY2llbnRmYWl0aC5jb20vVGhlTG9yZE9mU3Bpcml0cw?sa=X&ved=0CAYQ9sEGahgKEwiQi9Wux5T5AhUAAAAAHQAAAAAQiwM',
         'Online Great Books': 'https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmxpYnN5bi5jb20vMTIwNTk1L3Jzcw?sa=X&ved=0CAMQ4aUDahgKEwjoisGQm875AhUAAAAAHQAAAAAQ2Qo',
-        'School Sucks': 'https://podcasts.google.com/feed/aHR0cHM6Ly9zY2hvb2xzdWNrcy5wb2RvbWF0aWMuY29tL3JzczIueG1s?sa=X&ved=0CAwQ9sEGahgKEwjoisGQm875AhUAAAAAHQAAAAAQug0'}
+        'School Sucks': 'https://podcasts.google.com/feed/aHR0cHM6Ly9zY2hvb2xzdWNrcy5wb2RvbWF0aWMuY29tL3JzczIueG1s?sa=X&ved=0CAwQ9sEGahgKEwjoisGQm875AhUAAAAAHQAAAAAQug0',
+        'Growing Resilience': 'https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5saWJzeW4uY29tLzQxMTUwOS9yc3M?sa=X&ved=0CBEQlvsGahgKEwjoisGQm875AhUAAAAAHQAAAAAQyg8',
+        'Music & Ideas': 'https://podcasts.google.com/feed/aHR0cHM6Ly9tdXNpY2FuZGlkZWFzLmxpYnN5bi5jb20vcnNz?sa=X&ved=0CAsQ9sEGahgKEwjoisGQm875AhUAAAAAHQAAAAAQ-A8'}
+
 def getPodcastList():
     try:
         output = open("Podcasts.txt", "w")
