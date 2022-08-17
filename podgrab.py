@@ -8,11 +8,16 @@ import requests
 import lxml.html
 
 #list for podcast feeds
-feeds = {'Lord of Spirits': 'https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmFuY2llbnRmYWl0aC5jb20vVGhlTG9yZE9mU3Bpcml0cw?sa=X&ved=0CAYQ9sEGahgKEwiQi9Wux5T5AhUAAAAAHQAAAAAQiwM'}
-output = open("Podcasts.txt", "w")
+feeds = {'Lord of Spirits': 'https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmFuY2llbnRmYWl0aC5jb20vVGhlTG9yZE9mU3Bpcml0cw?sa=X&ved=0CAYQ9sEGahgKEwiQi9Wux5T5AhUAAAAAHQAAAAAQiwM',
+        'Online Great Books': 'https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmxpYnN5bi5jb20vMTIwNTk1L3Jzcw?sa=X&ved=0CAMQ4aUDahgKEwjoisGQm875AhUAAAAAHQAAAAAQ2Qo',
+        'School Sucks': 'https://podcasts.google.com/feed/aHR0cHM6Ly9zY2hvb2xzdWNrcy5wb2RvbWF0aWMuY29tL3JzczIueG1s?sa=X&ved=0CAwQ9sEGahgKEwjoisGQm875AhUAAAAAHQAAAAAQug0'}
+try:
+    output = open("Podcasts.txt", "w")
+except Exception(e):
+    print('***\n' + str(e) + '\n***')
 
 for podcast in feeds:
-    output.write('***' + str(podcast) + '***\n')
+    output.write('\n***' + str(podcast) + '***\n\n')
     # Making a GET request
     r = requests.get(feeds[podcast])
     html_txt = str(r.text)
